@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academy</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>الأكاديمية التعليمية</h1>
+
+    <!-- ================= الطلاب ================= -->
+
+    <section>
+
+        <h2>الطلاب</h2>
+
+        <!-- يحفظ رقم الطالب أثناء التعديل -->
+        <input type="hidden" id="studentId">
+
+        <div class="form">
+
+            <input
+                id="studentName"
+                placeholder="اسم الطالب"
+            >
+
+            <input
+                id="studentPhone"
+                placeholder="رقم الهاتف"
+            >
+
+            <input
+                id="studentAge"
+                type="number"
+                placeholder="العمر"
+            >
+
+            <button onclick="saveStudent()">
+                حفظ
+            </button>
+
+        </div>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>الاسم</th>
+
+                    <th>الهاتف</th>
+
+                    <th>العمر</th>
+
+                    <th>تعديل</th>
+
+                    <th>حذف</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="studentsTable">
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <!-- ================= الدروس ================= -->
+
+    <section>
+
+        <h2>الدروس</h2>
+
+        <!-- يحفظ رقم الدرس أثناء التعديل -->
+        <input type="hidden" id="lessonId">
+
+        <div class="form">
+
+            <input
+                id="lessonTitle"
+                placeholder="اسم الدرس"
+            >
+
+            <input
+                id="lessonTeacher"
+                placeholder="اسم المدرس"
+            >
+
+            <button onclick="saveLesson()">
+                حفظ
+            </button>
+
+        </div>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>اسم الدرس</th>
+
+                    <th>اسم المدرس</th>
+
+                    <th>تعديل</th>
+
+                    <th>حذف</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="lessonsTable">
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <!-- ================= التسجيل ================= -->
+
+    <section>
+
+        <h2>تسجيل طالب في درس</h2>
+
+        <div class="form">
+
+            <select id="studentsSelect">
+
+                <option value="">
+                    اختر الطالب
+                </option>
+
+            </select>
+
+            <select id="lessonsSelect">
+
+                <option value="">
+                    اختر الدرس
+                </option>
+
+            </select>
+
+            <button onclick="saveEnrollment()">
+                تسجيل
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ================= جدول التسجيلات ================= -->
+
+    <section>
+
+        <h2>التسجيلات</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>الطالب</th>
+
+                    <th>الدرس</th>
+
+                    <th>المدرس</th>
+
+                    <th>حذف</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="enrollmentsTable">
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
