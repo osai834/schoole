@@ -7,7 +7,7 @@ from typing import List
 from db import SessionLocal, Student, Lesson, Enrollment
 
 app = FastAPI()
-
+app.mount("/static", StaticFiles(directory="static"), name="static")
 # ==========================
 # CORS
 # ==========================
