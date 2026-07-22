@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from pydantic import BaseModel, ConfigDict
 from typing import List
-
+from fastapi.staticfiles import StaticFiles
 from db import SessionLocal, Student, Lesson, Enrollment
 
 app = FastAPI()
