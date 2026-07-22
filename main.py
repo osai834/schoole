@@ -96,7 +96,11 @@ def create_student(student: StudentBody, db: Session = Depends(get_db)):
 
     return new_student
 
+from fastapi.responses import FileResponse
 
+@app.get("/")
+def home():
+    return FileResponse("static/index.html")
 # تعديل طالب
 @app.put("/students/{student_id}", response_model=StudentResponse)
 def update_student(
